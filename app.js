@@ -5,6 +5,9 @@ const app = express();
 expressWs(app);
 
 const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 let connects = [];
 
 app.use(express.static("public"));
